@@ -1,0 +1,107 @@
+*, *::before, *::after {
+    -moz-box-sizing: boder-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    font-size: 100%;
+}
+
+body {
+    background-image: url(../assets/images/backgrounds/the_blue_blur_4k.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    font-family: 'Roboto', 'Noto', sans-serif;
+    color: white;
+    min-height: 100%;
+    padding-bottom: 200px;
+}
+
+.navbar {
+    position: relative;
+    padding: 0.5rem;
+    background-color: none;
+    z-index: 1;
+}
+
+.navbar .logo {
+    position: relative;
+    top: 0.25rem;
+    left: 0;
+    cursor: pointer;
+}
+
+.navbar .links-container-right {
+    display: table;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100px;
+    color: white;
+    text-decoration: none;
+}
+
+.navbar .links-container-left {
+    display: inline-flex;
+    position: absolute;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+}
+
+.links-container-right .navbar-link:hover {
+    background-color: yellow;
+    color: black;
+}
+
+.links-container-right .navbar-link {
+    display: table-cell;
+    position: relative;
+    height: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    vertical-align: middle;
+    color: white;
+    font-size: 0.625rem;
+    letter-spacing: 0.05rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.links-container-left .navbar-link {
+    position: relative;
+    height: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    vertical-align: middle;
+    color: white;
+    font-size: 0.85rem;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.links-container-right .navbar-link:hover {
+    color: black;
+}
+
+.links-container-left .navbar-link:hover {
+    color: yellow;
+}
+
+.container {
+     margin: 0 auto;
+     max-width: 64rem;
+ }
+
+.container.narrow {
+     max-width: 56rem;
+ }
