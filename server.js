@@ -29,5 +29,3 @@ app.use("/system/admin",RED.httpAdmin);
 app.use("/",RED.httpNode);
 server.listen(3030);
 RED.start();
-
-//angular.module('biizyApp', ['ui.router']);

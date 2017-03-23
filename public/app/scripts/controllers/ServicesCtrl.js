@@ -1,9 +1,4 @@
-(function() {
-     function ServicesCtrl() {
-         // controller logic
-     }
- 
-     angular
-         .module('biizyApp')
-         .controller('ServicesCtrl', ServicesCtrl);
-})();
+angular.module('bizzyApp')
+    .controller("ServicesCtrl", function() {
+    
+});

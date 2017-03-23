@@ -1,11 +1,48 @@
-<html>
-    <body>
-        <h1>Hello, world</h1>
-        <img src="/app/assets/images/biizy_desk.jpg">
-        
-        <form method="post" action="/processform">
-            <input type="hidden" name="test" value="test">
-            <input type="submit">
-        </form>
-    </body>
+<!DOCTYPE html>
+<html ng-app="biizyApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Biizy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto|Noto+Sans:400,800,600,700,300">
+    <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" type="text/css" href="../app/styles/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../app/styles/main.css">
+    <link rel="stylesheet" type="text/css" href="../app/styles/landing.css">
+    <link rel="icon" type="image/x-icon" href="../app/assets/images/biizy_favicon.ico">
+</head>
+<body>
+    <nav class="navbar"> <!-- nav bar -->
+        <a ui-sref="index.html" class="logo">    
+            <img src="../app/assets/images/biizy_logo.png" ui-sref="landing.html" alt="biizy logo">
+        </a>
+        <div class="links-container-left">
+            <a href="../app/templates/request.html" class="navbar-link">Request</a>
+            <a href="../app/templates/services.html" class="navbar-link">Services</a>
+            <a ui-sref="landing.html" class="navbar-link">FAQ</a>
+        </div>
+        <div class="links-container-right">
+            <a ui-sref="landing.html" class="navbar-link">Sign Up</a>
+            <a ui-sref="landing.html" class="navbar-link">Log In</a>
+        </div>
+    </nav>
+    
+    <form method="post" action="/processform">
+        <input type="email" name="emailInput" placeholder="Enter email address here">
+        <input type="submit">
+    </form>
+    
+    <ui-view></ui-view>
+    
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.1.10/buzz.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/app/scripts/controllers/LandingCtrl.js"></script>
+    <script src="/app/scripts/controllers/RequestCtrl.js"></script>
+    <script src="/app/scripts/controllers/ServicesCtrl.js"></script>
+</body>
 </html>
+
+        
