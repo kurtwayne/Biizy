@@ -50,10 +50,15 @@ body {
 
 .navbar .links-container-left {
     align-self: center;
+    display: table;
 }
 
 .links-container-right .navbar-link:hover {
     background-color: yellow;
+    color: black;
+}
+
+.links-container-left .navbar-link:hover {
     color: black;
 }
 
@@ -93,7 +98,7 @@ body {
 }
 
 .links-container-left .navbar-link:hover {
-    color: yellow;
+    color: black;
 }
 
 .container {

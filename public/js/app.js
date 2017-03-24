@@ -26,5 +26,4 @@ angular.module('biizyApp', ['ui.router'])
                      templateUrl: '/public/app/templates/services.html'
                  });
         }
-    
 });
