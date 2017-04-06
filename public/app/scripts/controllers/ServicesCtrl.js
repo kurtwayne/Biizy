@@ -1,4 +1,3 @@
-angular.module('bizzyApp')
-    .controller("ServicesCtrl", function() {
-    
-});
+angular
+    .module('biizyApp')
+    .controller("ServicesCtrl");

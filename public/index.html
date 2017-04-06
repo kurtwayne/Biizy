@@ -16,35 +16,34 @@
 </head>
 <body>
     <nav class="navbar"> <!-- nav bar -->
-        <a ui-sref="index.html" class="logo">    
+        <a ui-sref="landing" class="logo">    
             <img src="../app/assets/images/biizy_logo_gray.png" ui-sref="landing.html" alt="biizy logo">
         </a>
         <div class="links-container-left">
-            <a href="../app/templates/request.html" class="navbar-link">Request</a>
-            <a href="../app/templates/services.html" class="navbar-link">Services</a>
-            <a ui-sref="landing.html" class="navbar-link">FAQ</a>
+            <a ui-sref="request" class="navbar-link">Request</a>
+            <a ui-sref="services" class="navbar-link">Services</a>
+            <a ui-sref="faq" class="navbar-link">FAQ</a>
         </div>
         <div class="links-container-right">
-            <a ui-sref="landing.html" class="navbar-link">Sign Up</a>
-            <a ui-sref="landing.html" class="navbar-link">Log In</a>
+            <a ui-sref="landing" class="navbar-link">Sign Up</a>
+            <a ui-sref="landing" class="navbar-link">Log In</a>
         </div>
     </nav>
-    
-    <form method="post" action="/processform">
-        <input type="email" name="emailInput" placeholder="Enter email address here">
-        <input type="submit">
-    </form>
     
     <ui-view></ui-view>
     
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.1.10/buzz.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
-    <script src="/js/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.1.10/buzz.min.js"></script>
+    <script src="/app/scripts/app.js"></script>
     <script src="/app/scripts/controllers/LandingCtrl.js"></script>
     <script src="/app/scripts/controllers/RequestCtrl.js"></script>
     <script src="/app/scripts/controllers/ServicesCtrl.js"></script>
+    <!-- Wizard Controllers -->
+    <script src="/app/scripts/controllers/step1Ctrl.js"></script>
+    <script src="/app/scripts/controllers/step2Ctrl.js"></script>
+    <script src="/app/scripts/controllers/step3Ctrl.js"></script>
 </body>
 </html>
 

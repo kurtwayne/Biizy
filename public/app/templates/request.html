@@ -1,30 +1,11 @@
-<body>
-    <nav class="navbar"> <!-- nav bar -->
-        <a href="/" class="logo">    
-            <img src="../assets/images/biizy_logo_gray.png" alt="biizy logo">
-        </a>
-        <div class="links-container-left">
-            <a href="../templates/request.html" class="navbar-link">Request</a>
-            <a href="../templates/services.html" class="navbar-link">Services</a>
-            <a href="/" class="navbar-link">FAQ</a>
-        </div>
-        <div class="links-container-right">
-                <a href="/" class="navbar-link">Sign Up</a>
-                <a href="/" class="navbar-link">Log In</a>
-        </div>
-    </nav>
-
-    <section class="hero-content">
-         <h1 class="hero-title">Request Here!</h1>
-
-    </section>
-
-    <form method="post" action="/processform">
-        <input type="email" name="emailInput" placeholder="Enter email address here"><br>
-        <input type="text" name="textInput" placeholder="First Name"><br>
-        <input type="text" name="textInput" placeholder="Last Name"><br>
-        <input type="text" name="textInput" placeholder="Legal Business Name"><br>
-        <input type="text" name="textInput" placeholder="DBA Name if Applicaable"><br>
-        <input type="submit">
-    </form>
-</body>
+<section class="hero-content">
+    <h1 class="hero-title">Request Here!</h1>
+        <form method="post" action="/processform">
+            <input type="email" name="emailInput" placeholder="Enter email address here"><br>
+            <input type="text" name="NameInput" placeholder="First Name"><br>
+            <input type="text" name="NameInput" placeholder="Last Name"><br>
+            <input type="text" name="BizLegalInput" placeholder="Legal Business Name"><br>
+            <input type="text" name="BizDBAInput" placeholder="DBA Name if Applicaable"><br>
+            <input type="submit">
+        </form>
+</section>

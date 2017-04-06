@@ -1,4 +1,3 @@
-angular.module('bizzyApp')
-    .controller("RequestCtrl", function() {
-    
-});
+angular
+    .module('biizyApp')
+    .controller("RequestCtrl");

@@ -10,13 +10,14 @@ html {
 }
 
 body {
+    top: 100px;
     background-color: #f5f5f5;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center center;
     background-size: cover;
     font-family: 'Roboto', 'Noto', sans-serif;
-    color: white;
+    color: #757575;
     min-height: 100%;
     padding-bottom: 200px;
 }
@@ -24,10 +25,11 @@ body {
 .navbar {
     display: flex;
     flex-direction: row;
-    position: relative;
+    position: fixed;
     padding: 0.5rem;
-    background-color: none;
-    z-index: 1;
+    background-color: #f5f5f5;
+    z-index: 1000;
+    min-height: 77px;
 }
 
 .navbar .logo {
@@ -40,10 +42,10 @@ body {
 
 .navbar .links-container-right {
     display: table;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
-    height: 75px;
+    height: 82px;
     color: #757575;
     text-decoration: none;
 }
@@ -103,7 +105,7 @@ body {
 
 .container {
      margin: 0 auto;
-     max-width: 64rem;
+     max-width: 250rem;
  }
 
 .container.narrow {
@@ -127,7 +129,6 @@ body {
 }
 
 section h1 {
-    display: flex;
     flex-direction: center;
     color: blueviolet;
     font-size: 48px;
