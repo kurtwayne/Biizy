@@ -1,6 +1,5 @@
 <section class="hero-content">
     <h1>Entity</h1>
-        <h3>I have already formed my business entity.</h3>
         <label>Select Your Entity Type:</label>
             <select type="text" ng-model="entity" >
                 <option value>-- Choose Here --</option>
@@ -14,13 +13,5 @@
                 <option value="NPO">Other Non-profit Organization</option>
             </select>
         <br />
-        <h3>I need to form a new business entity.</h3>
-        <label>Select Your Entity Type:</label>
-            <select type="text" ng-model="newEntity" >
-                <option value>-- Choose Here --</option>
-                <option value="LLC">Limited Liability Company (LLC)</option>
-                <option value="CORP">Corporation (Inc)</option>
-            </select>
-        <br />
-    <button ng-click="next('step2')">Go to 2</button>    
+    <button ng-click="next('step9exist')">Submit</button>    
 </section>
