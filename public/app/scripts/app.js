@@ -105,36 +105,22 @@ angular.module('biizyApp', ['ui.router'])
                      controller: 'step7existCtrl',
                      templateUrl: '/app/templates/step7exist.html'
                  })
-                 .state('step8new', {
-                     url: '/step8new',
-                     controller: 'step8newCtrl',
-                     templateUrl: '/app/templates/step8new.html'
+                 .state('shipping', {
+                     url: '/shipping',
+                     controller: 'shippingCtrl',
+                     templateUrl: '/app/templates/shipping.html'
                  })
-                 .state('step8exist', {
-                     url: '/step8exist',
-                     controller: 'step8existCtrl',
-                     templateUrl: '/app/templates/step8exist.html'
+                 .state('payment', {
+                     url: '/payment',
+                     controller: 'paymentCtrl',
+                     templateUrl: '/app/templates/payment.html'
                  })
-                 .state('step9new', {
-                     url: '/step9new',
-                     controller: 'step9newCtrl',
-                     templateUrl: '/app/templates/step9new.html'
+                 .state('thankyou', {
+                     url: '/thankyou',
+                     controller: 'thankYouCtrl',
+                     templateUrl: '/app/templates/thankyou.html'
                  })
-                  .state('step9exist', {
-                     url: '/step9exist',
-                     controller: 'step9existCtrl',
-                     templateUrl: '/app/templates/step9exist.html'
-                 })
-                 .state('step10new', {
-                     url: '/step10new',
-                     controller: 'step10newCtrl',
-                     templateUrl: '/app/templates/step10new.html'
-                 })
-                 .state('step10exist', {
-                     url: '/step10exist',
-                     controller: 'step10existCtrl',
-                     templateUrl: '/app/templates/step10exist.html'
-                 })
+
     
             $urlRouterProvider.otherwise("/");
                  });

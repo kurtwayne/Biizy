@@ -1,11 +1,66 @@
 <section class="hero-content">
-    <h1>Entity</h1>
-        <label>Select The Entity Type You Would Like To Form:</label>
-            <select type="text" ng-model="newEntity" >
-                <option value>-- Choose Here --</option>
-                <option value="LLC">Limited Liability Company (LLC)</option>
-                <option value="CORP">Corporation (Inc)</option>
-            </select>
+    <h1>Confirm Your Business Details</h1>
+        <div class="col-sm-12 col-md-8 col-step-9">
+                <dl>
+                  <dt>Entity Name</dt>
+                  <dd>
+                    <a href="#" title="click to edit" id="entityname" data-type="text" data-pk="50436">Entity Name </a>
+                  </dd>
+                  <dt>Designator</dt>
+                  <dd>
+                    <a href="#" title="click to edit" id="designator" data-type="select" data-pk="50436">Designator </a>
+                  </dd>
+                  <dt>First Name</dt>
+                  <dd>
+                    <a href="#" title="click to edit" id="firstname" data-type="text" data-pk="50436">First Name </a>
+                  </dd>
+                  <dt>Last Name</dt>
+                  <dd>
+                    <a href="#" title="click to edit" id="lastname" data-type="text" data-pk="50436">Last Name </a>
+                  </dd>
+                  <dt>Phone</dt>
+                  <dd>
+                    <a href="#" title="click to edit" id="phone" data-type="text" data-pk="50436">Phone </a>
+                  </dd>
+                  <dt>Email</dt>
+                  <dd>
+                    <a href="#" title="click to edit" id="email" data-type="text" data-pk="50436">Email </a>
+                  </dd>
+                  <dt>Address Line 1</dt>
+                  <dd>
+                    <a href="#" title="click to edit" id="add1" data-type="text" data-pk="50436">Address Line 1 </a>
+                  </dd>
+                  <dt>Address Line 2</dt>
+                  <dd>
+                    <a href="#" title="click to edit" id="add2" data-type="text" data-pk="50436">Address Line 2 </a>
+                  </dd>
+                  <dt>City</dt>
+                  <dd>
+                    <a href="#" title="click to edit" id="addcity" data-type="text" data-pk="50436">City </a>
+                  </dd>
+                  <dt>State</dt>
+                  <dd>
+                    <a href="#" title="click to edit" id="addstate" data-type="select" data-pk="50436">State </a>
+                  </dd>
+                  <dt>Zip</dt>
+                  <dd>
+                    <a href="#" title="click to edit" id="addzip" data-type="text" data-pk="50436">Zip </a>
+                  </dd>
+                  <dd></dd>
+                </dl>
+            <div class="panel panel-fp">
+                <div class="panel-heading"><i class="fa fa-exclamation-triangle"></i> Important State Filing Fee Notice</div>
+                    <div class="panel-body">
+                        <div class="well well-sm text-left" style="font-size: 24px; color: #00a4e3; line-height: 24px">
+                            <span class="stateface stateface-replace stateface-ut">State </span></div>
+                                    <ul>
+                                         <li>State filing fees are not optional.</li>
+                                                 <li>Standard processing time in State  is 3-5 Weeks.</li>
+                                       <li><strong>IncForFree does not charge a premium for paying the state directly on your behalf. This fee is mandatory and is determined based on your chosen state and entity type.</strong></li>
+                                    </ul>
+                    </div>
+            </div>
+        </div>
         <br />
-    <button ng-click="next('step8new')">Submit</button>    
+    <button ng-click="next('shipping')">Next Step</button>
 </section>

@@ -1,11 +1,30 @@
 <section class="hero-content">
-    <h1>Entity</h1>
-        <label>Select The Entity Type You Would Like To Form:</label>
-            <select type="text" ng-model="newEntity" >
-                <option value>-- Choose Here --</option>
-                <option value="LLC">Limited Liability Company (LLC)</option>
-                <option value="CORP">Corporation (Inc)</option>
-            </select>
+    <h1>Let us create your Operating Agreement for your business!</h1>
+        <label>What is and why do I need an Operating Agreement?</label>
+            <p>Without This Document You Could Be Leaving Yourself Vulnerable&hellip;</p>
+            <p><strong>Operating Agreement:</strong> The legal document that communicates how your business is run. It proves you actually own the business and lists the governing members of the entity, including everyone's financial and managerial responsibilities.</p>
+            <p>It's such an important document that <strong>most states actually require it by law</strong>.</p>
+            <p>Learn more about why you need an Operating Agreement for your business:</p>
+                <ul>
+                    <li>Ensures that courts will respect your personal liability protection by showing that you have been diligent with organizing your LLC as a legitimate business.</li>
+                    <li>Establishes rules that govern how profits will be divided, how major business decisions will be made, and the procedures for handling the departure and addition of members.</li>
+                    <li>Helps to avoid misunderstandings among the owners over finances and management.</li>
+                    <li>Allows you to create your own operating rules rather than being governed by the default rules in your state's LLC laws, which might not be to your benefit.</li>
+                </ul>
         <br />
-    <button ng-click="next('step6new')">Submit</button>    
+        <label>
+            <input type="radio" name="upgrade_option" id="upgrade_option1" value="opagree" checked="checked" required="required" />
+            <span class="p-check-icon"> <span class="p-check-block"></span> </span> <span class="p-label p-label-yes"><strong>Yes, please include
+            an Operating Agreement.</strong> ($50)</span> 
+        </label>
+        <br />
+        <label>
+            <input type="radio" name="upgrade_option" id="upgrade_option2" value="none" />
+            <span class="p-check-icon"> 
+                <span class="p-check-block"></span> 
+            </span> 
+            <span class="p-label">No, I will supply my own Operating Agreement.</span>
+        </label>
+        <br />
+    <button ng-click="next('step6new')">Next Step</button>    
 </section>

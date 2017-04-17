@@ -1,11 +1,28 @@
 <section class="hero-content">
-    <h1>Entity</h1>
-        <label>Select The Entity Type You Would Like To Form:</label>
-            <select type="text" ng-model="newEntity" >
-                <option value>-- Choose Here --</option>
-                <option value="LLC">Limited Liability Company (LLC)</option>
-                <option value="CORP">Corporation (Inc)</option>
-            </select>
+    <h1>Let Us Send You Your Legal Ownership Certificates and Company Seal</h1>
+        <label>Why do I need these Certificates and Seal?</label>
+            <p>Anybody can start a business. It's how you manage and maintain the organization that determines how safe you are against a lawsuit or even the IRS in the event of an audit.</p>
+            <p>With articles, bylaws, certificates, shares, agreements and minutes, you may be wondering if it's even worth all the trouble to properly maintain your records.  Here's what you need to know:</p>
+                <ul>
+                    <li>It is generally required by statute.  While each state's requirements are different, maintaining a record book is crucial for legal operation.</li>
+                    <li>Preserves limited liability. Observing formalities preserves the limited liability shield offered by your entity.  Just because you form an entity does not guarantee that you are immune from personal liability.  You must act and practice as a legal company.</li>
+                    <li>Minimizes ownership disputes.  Too often, a dispute can arise as to whether a particular action was properly authorized by the company.  Once an issue arises, it can be very exhausting in time and energy to resolve.  The better practice is to get in the habit of recording activities in writing, along with the corresponding decisions taken by the company.  This documentation should then be filed in the record book.</li>
+                    <li>Reduces potential problems with the IRS.  In the event of an audit or other inquiry by the IRS, your corporate record book may become an issue in order to substantiate your tax claims.  Proper documentation in the record book can help determine a favorable result.</li>
+                    <li>Facilitates business transactions.  For instance, if your business needs a loan or decides to sell certain company assets, the record book is proof of proper formation and operations.</li>
+                </ul>
+        <label>
+            <input type="radio" name="upgrade_option" id="upgrade_option1" value="kitseal" checked="checked" required="required" />
+            <span class="p-check-icon"> <span class="p-check-block"></span> </span> <span class="p-label p-label-yes"><strong>Yes, include a Corporate Kit, Ownership Certificates, and Seal.</strong>&nbsp; ($99)</span>
+        </label>
         <br />
-    <button ng-click="next('step7new')">Submit</button>    
+        <label>
+            <input type="radio" name="upgrade_option" id="upgrade_option2" value="seal" />
+            <span class="p-check-icon"> <span class="p-check-block"></span> </span> <span class="p-label p-label-yes">Yes, include a Corporate Seal only.&nbsp; ($49)</span>
+        </label>
+        <br />
+        <label>
+            <input type="radio" name="upgrade_option" id="upgrade_option3" value="none" />
+            <span class="p-check-icon"> <span class="p-check-block"></span> </span> <span class="p-label">No, I will get these items myself.</span> </label>
+        <br />
+    <button ng-click="next('step7new')">Next Step</button>
 </section>
