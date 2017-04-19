@@ -6,13 +6,26 @@
     <br />
     <label>Designator</label>
         <select type="text" ng-model="designator" >
-            <option value>-- Select --</option>
+            <option selected="selected" value="">-- Select --</option>
             <option value=", LLC">, LLC</option>
             <option value=", L.L.C">, L.L.C</option>
             <option value=", Limited Liability Company">, Limited Liability Company</option>
             <option value="LLC">LLC</option>
             <option value="L.L.C">L.L.C</option>
             <option value="Limited Liability Company">Limited Liability Company</option>
+        </select>
+    <br />
+    <!-- Need 'if' statement to show this section if corporation is selected -->
+    <label>Designator (**Show if Corporation**)</label>
+        <select type="text" ng-model="designator" >
+            <option selected="selected" value="">-- Select --</option>
+            <option value=", Incorporated">, Incorporated</option>
+            <option value=", Inc.">, Inc.</option>
+            <option value=" Inc"> Inc</option>
+            <option value=" Incorporated"> Incorporated</option>
+            <option value=" Inc."> Inc.</option>
+            <option value=" Corporation"> Corporation</option>
+            <option value=" Company"> Company</option>
         </select>
     <br />
     <label>Industry Category</label>
