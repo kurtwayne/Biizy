@@ -1,7 +1,243 @@
 <section class="hero-content">
   	<h3 class="hero-title">Step 3</h3>
-    <label >Enter your Last Name:</label>
-		<input type="text" ng-model="lastName" />
+
+    <!-- Name Information -->
+    <table  border="0" cellspacing="0" cellpadding="3" frame="box" rules="none" class="formbox"  width="520">
+        <tr align="center">
+            <td class="chtitle" valign="top"colspan="2"><div><span id="textprincipal">! if corp or s-corp "Principal/Highest Ranking Officer Information", if LLC "Managing Member/Owner Information", </span></div></td>
+        </tr>
+        <tr id="row_text_principal_agreement_fn">
+            <td class="chsub twowide" valign="top"><span id="principal_fn_label">First Name</span>
+	    </td>
+	    <td class="ch" valign="top">
+		<input type="text" name="principal_name_fn" class="fn required"
+                id="principalnamefieldfn" size="20" onFocus="entity_specific_help('principal', 'principalnamefieldfn')"
+		onChange="principal_name_change()" onkeydown="control_tabbing(event);"
+		value="">
+	    </td>
+	</tr>
+	<tr id="row_text_principal_agreement_mn">
+	    <td class="chsub twowide" valign="top">Middle Name <span class="optional">(optional)</span>
+	    </td>
+	    <td class="ch" valign="top">
+		<input type="text" name="principal_name_mn" class="mn" id="principalnamefieldmn" size="7"
+                onFocus="entity_specific_help('principal', 'principalnamefieldfn')" onChange="principal_name_change()"
+		value="">
+	    </td>
+	</tr>
+	<tr id="row_text_principal_agreement_ln">
+	    <td class="chsub twowide" valign="top">Last Name
+	    </td>
+	    <td class="ch" valign="top">
+		<input type="text" name="principal_name_ln" class="ln required" id="principalnamefieldln" size="20"
+                onFocus="entity_specific_help('principal', 'principalnamefieldfn')" onChange="principal_name_change()"
+		value="">
+	    </td>
+	</tr>
+        <tr id="row_text_principal_agreement_title">
+            <td class="chsub twowide" valign="top">Title
+	    </td>
+            <td class="ch" valign="top"><input
+                type="text" name="text_principal_agreement_title" value=""
+                class="formInput required" id="principalagreementtitlefield" onChange="changeTitle(this.id);"
+                size="20" onFocus="entity_specific_help('principal', 'principalnamefieldfn')"></td>
+        </tr>
+        <tr>
+            <td class="chsub twowide" valign="top"><span id="principal_ssn_label">Social Security Number</span>
+	    </td>
+            <td class="ch" valign="top"><input
+                type="text" name="principal_ssn" value=""
+                class="formInput required ssn" id="principalssnfield" onChange="inline_valid_principalssn()"
+                size="13" maxlength="13" onFocus="entity_specific_help('principal', 'principalssnfield')"></td>
+        </tr>
+    </table>
+
+    <!-- Address Info -->
+    <div id="div_physicaladdress">
+    <table  border="0" cellspacing="0" cellpadding="3" frame="box" rules="none" class="formbox"  width="520" >
+      <tr align="center">
+          <td class="chsub twowide" valign="top"><div id="textphysicaladdress">Business/Company Adress</div></td>
+      </tr>
+        <tr>
+            <td class="chsub twowide" valign="top">Address &nbsp;
+      </td>
+            <td class="ch" valign="top"><input
+                type="text" name="physical_address"
+                value=""
+                class="formInput required" id="physicaladdressfield"
+                maxlength="35" size="35" onChange="inline_valid_physical_address()" onFocus="entity_specific_help('physical', 'physicaladdressfield')"></td>
+        </tr>
+        <tr>
+            <td class="chsub twowide" valign="top">City
+      </td>
+            <td class="ch" valign="top">
+                <input type="text" name="physical_city" value=""
+                class="formInput required" id="physicalcityfield"
+                size="22" maxlength="22" onFocus="entity_specific_help('physical', 'physicalcityfield')">
+            </td>
+        </tr>
+        <tr>
+            <td class="chsub twowide" valign="top">State
+      </td>
+            <td class="ch" valign="top"><span id="physicalstatefield" class="formInputSpan"><select
+                name="physical_state" class="required" id="physical_state" onChange="physical_address_change(); getCounties('entitycountyfield', this.value); checkCounty(); checkState();" onblur="physical_state_change();">
+                <option value=""></option>
+                  <option value="AL" >Alabama</option>
+    <option value="AK" >Alaska</option>
+    <option value="AZ" >Arizona</option>
+    <option value="AR" >Arkansas</option>
+    <option value="CA" >California</option>
+    <option value="CO" >Colorado</option>
+    <option value="CT" >Connecticut</option>
+    <option value="DC" >D.C.</option>
+    <option value="DE" >Delaware</option>
+    <option value="FL" >Florida</option>
+    <option value="GA" >Georgia</option>
+    <option value="HI" >Hawaii</option>
+    <option value="ID" >Idaho</option>
+    <option value="IL" >Illinois</option>
+    <option value="IN" >Indiana</option>
+    <option value="IA" >Iowa</option>
+    <option value="KS" >Kansas</option>
+    <option value="KY" >Kentucky</option>
+    <option value="LA" >Louisiana</option>
+    <option value="ME" >Maine</option>
+    <option value="MD" >Maryland</option>
+    <option value="MA" >Massachusetts</option>
+    <option value="MI" >Michigan</option>
+    <option value="MN" >Minnesota</option>
+    <option value="MS" >Mississippi</option>
+    <option value="MO" >Missouri</option>
+    <option value="MT" >Montana</option>
+    <option value="NE" >Nebraska</option>
+    <option value="NV" >Nevada</option>
+    <option value="NH" >New Hampshire</option>
+    <option value="NJ" >New Jersey</option>
+    <option value="NM" >New Mexico</option>
+    <option value="NY" >New York</option>
+    <option value="NC" >North Carolina</option>
+    <option value="ND" >North Dakota</option>
+    <option value="OH" >Ohio</option>
+    <option value="OK" >Oklahoma</option>
+    <option value="OR" >Oregon</option>
+    <option value="PA" >Pennsylvania</option>
+    <option value="RI" >Rhode Island</option>
+    <option value="SC" >South Carolina</option>
+    <option value="SD" >South Dakota</option>
+    <option value="TN" >Tennessee</option>
+    <option value="TX" >Texas</option>
+    <option value="UT" >Utah</option>
+    <option value="VT" >Vermont</option>
+    <option value="VA" >Virginia</option>
+    <option value="WA" >Washington</option>
+    <option value="WV" >West Virginia</option>
+    <option value="WI" >Wisconsin</option>
+    <option value="WY" >Wyoming</option>
+    <option value="AS" >American Samoa</option>
+    <option value="FM" >Federated States of Micronesia</option>
+    <option value="GU" >Guam</option>
+    <option value="JI" >Jarvis Island</option>
+    <option value="MH" >Marshall Islands</option>
+    <option value="MP" >Northern Marianna Islands</option>
+    <option value="PW" >Palau</option>
+    <option value="PR" >Puerto Rico</option>
+    <option value="RN" >Republic of Nauru</option>
+    <option value="VI" >Virgin Islands</option>
+    <option value="WK" >Wake Island</option>
+                </select></span></td>
+        </tr>
+        <tr>
+            <td class="chsub twowide" valign="top">Zip Code (5 Digit)
+      </td>
+            <td class="ch" valign="top"><input type="text" name="physical_zip" value=""
+                class="formInput required" id="physicalzipfield"
+                size="10" maxlength="5" onFocus="entity_specific_help('physical', 'physicalzipfield')"></td>
+        </tr>
+    </table>
+    <div id="div_entitycounty" style="display:none;">
+    <table  border="0" cellspacing="0" cellpadding="3" frame="box" rules="none" class="formbox"  width="520">
+        <tr>
+            <td class="chsub twowide" valign="top">County
+      </td>
+            <td class="ch" valign="top"><span id="entity_county_field" class="formInputSpan"><select
+                name="entity_county" id="entitycountyfield" class="entitycountyfield required" style="width:255px; margin: 0px 0px 0px 0px;" onFocus="entity_specific_help('county', 'entitycountyfield')" onChange="checkCountyNotListed()">
+
+    <option value=''></option>
+                  <option value="* If your county is not listed, click here">* If your county is not listed, click here</option>
+    <option value="* If your county is not listed, click here" >* If your county is not listed, click here</option>
+                </select></span></td>
+        </tr>
+    </table>
+    </div>
+    </div>
+
+    <!-- State of Incorporation -->
+    <div id="div_ifcorpstate" style="">
+      <table  border="0" cellspacing="0" cellpadding="3" frame="box" rules="none" class="formbox"  width="520">
+        <tr>
+          <td class="chtitle" valign="top">Where was the LLC or Corporation organized/incorporated?</td>
+        </tr>
+          <tr>
+          <td class="chsub twowide" valign="top">State</td>
+          <td class="ch" valign="top"><span id="ifcorpstatefieldspan" class="formInputSpan"><select
+              name="ifcorpstatefield" id="ifcorpstatefield" class="required" onChange="updateifcorplocation(this.id);">
+              <option value=""></option>
+                <option value="AL" >Alabama</option>
+                <option value="AK" >Alaska</option>
+                <option value="AZ" >Arizona</option>
+                <option value="AR" >Arkansas</option>
+                <option value="CA" >California</option>
+                <option value="CO" >Colorado</option>
+                <option value="CT" >Connecticut</option>
+                <option value="DC" >D.C.</option>
+                <option value="DE" >Delaware</option>
+                <option value="FL" >Florida</option>
+                <option value="GA" >Georgia</option>
+                <option value="HI" >Hawaii</option>
+                <option value="ID" >Idaho</option>
+                <option value="IL" >Illinois</option>
+                <option value="IN" >Indiana</option>
+                <option value="IA" >Iowa</option>
+                <option value="KS" >Kansas</option>
+                <option value="KY" >Kentucky</option>
+                <option value="LA" >Louisiana</option>
+                <option value="ME" >Maine</option>
+                <option value="MD" >Maryland</option>
+                <option value="MA" >Massachusetts</option>
+                <option value="MI" >Michigan</option>
+                <option value="MN" >Minnesota</option>
+                <option value="MS" >Mississippi</option>
+                <option value="MO" >Missouri</option>
+                <option value="MT" >Montana</option>
+                <option value="NE" >Nebraska</option>
+                <option value="NV" >Nevada</option>
+                <option value="NH" >New Hampshire</option>
+                <option value="NJ" >New Jersey</option>
+                <option value="NM" >New Mexico</option>
+                <option value="NY" >New York</option>
+                <option value="NC" >North Carolina</option>
+                <option value="ND" >North Dakota</option>
+                <option value="OH" >Ohio</option>
+                <option value="OK" >Oklahoma</option>
+                <option value="OR" >Oregon</option>
+                <option value="PA" >Pennsylvania</option>
+                <option value="RI" >Rhode Island</option>
+                <option value="SC" >South Carolina</option>
+                <option value="SD" >South Dakota</option>
+                <option value="TN" >Tennessee</option>
+                <option value="TX" >Texas</option>
+                <option value="UT" >Utah</option>
+                <option value="VT" >Vermont</option>
+                <option value="VA" >Virginia</option>
+                <option value="WA" >Washington</option>
+                <option value="WV" >West Virginia</option>
+                <option value="WI" >Wisconsin</option>
+                <option value="WY" >Wyoming</option>
+              </select></span></td>
+          </tr>
+      </table>
+    </div>
+
     <br />
     <button ng-click="next('step4exist')">Go to 4</button>
 </section>

@@ -1,17 +1,80 @@
 <section class="hero-content">
-    <h1>Entity</h1>
-        <label>Select Your Entity Type:</label>
-            <select type="text" ng-model="entity" >
-                <option value>-- Choose Here --</option>
-                <option value="LLC">Limited Liability Company (LLC)</option>
-                <option value="CORP">Corporation (Inc)</option>
-                <option value="SOLE PROP">Individual / Sole Proprietor</option>
-                <option value="PARTNER">Partnership</option>
-                <option value="SCORP">S-Corporation</option>
-                <option value="LP">Personal Service Corporation (Licensed Professional)</option>
-                <option value="CHURCH">Church or Church Controlled Organization</option>
-                <option value="NPO">Other Non-profit Organization</option>
-            </select>
-        <br />
-    <button ng-click="next('step5exist')">Submit</button>    
+    <h1>EIN Request</h1>
+    <!-- REASON FOR APPLYING  -->
+    <div id="div_reasonapply" style="">
+        <hr/>
+      <table  border="0" cellspacing="0" cellpadding="3" frame="box" rules="none" class="formbox"  width="520">
+          <tr>
+            <td class="chsub" valign="top"  style="margin-top:5px;">Closest Reason for Applying</td>
+            <td class="ch" valign="top" style="margin-top:5px;"><span id="entityreasonfield" class="formInputSpan">
+              <select name="entity_reason" id="entity_reason" onChange="checkReason()" onfocus="showHelp(this.id)" size="1" class="formwidthm required">
+                <option value="0">Select</option>
+                <option value="started_new_business"  >Started New Business / Personal Use</option>
+                <option value="hired_employees"  >Hired Employees</option>
+                <!-- option value="compliance_with_irs_regulations"  >Compliance with IRS Regulations</option -->
+                <option value="banking_purposes"  >Banking Purposes</option>
+                <option value="changed_type_of_organization"  >Changed Type Of Organization</option>
+                <option value="purchased_business"  >Purchased Business</option>
+                <!-- option value="other"  >Other</option -->
+              </select></span></td>
+          </tr>
+      </table>
+    </div>
+    <!-- END REASON APPLY -->
+
+    <!-- ACTIVITY OF BUSINESS -->
+    <div id="div_principalactivity" style="">
+      <table  border="0" cellspacing="0" cellpadding="3" frame="box" rules="none" class="formbox"  width="520">
+          <tr>
+            <td class="chsub"  valign="top" style="margin-top:5px;">Primary Activity</td>
+            <td class="ch" valign="top" style="margin-top:5px;">
+        			<span class="formInputSpan">
+        				<select name="entity_activity" id="entityactivityfield" onChange="checkActivity()" onFocus="showHelp(this.id)" size="1" class="formwidthm required">
+        					<option value="" selected>Select</option>
+        					<option value="construction" >Construction</option>
+        					<option value="rental_leasing" >Rental Leasing</option>
+        					<option value="transportation" >Transportation</option>
+        					<option value="warehousing" >Warehousing</option>
+        					<option value="accomodation" >Accomodation</option>
+        					<option value="food_service" >Food Service</option>
+        					<option value="healthcare" >Healthcare</option>
+        					<option value="social_assistance" >Social Assistance</option>
+        					<option value="real_estate" >Real Estate</option>
+        					<option value="manufacturing" >Manufacturing</option>
+        					<option value="finance" >Finance</option>
+        					<option value="insurance" >Insurance</option>
+        					<option value="retail" >Retail</option>
+        					<option value="wholesaleagent_broker" >Wholesale-agent/broker</option>
+        					<option value="wholesaleagent_other" >Wholesale-other</option>
+        					<option value="other" >Other</option>
+                </select>
+        			</span>
+            </td>
+          </tr>
+      </table>
+    </div>
+    <!-- END ACTIVITY OF BUSINESS -->
+
+    <!-- BUSINESS PROVIDES -->
+    <div id="div_businessprovides" style="">
+      <table  border="0" cellspacing="0" cellpadding="3" frame="box" rules="none" class="formbox"  width="520">
+          <tr>
+              <td class="chsub" valign="top" style="margin-top:5px;" colspan="2">
+                <div>
+                  <span id="textbusinessprovides">Specific Products or Services Provided</span>
+  	            </div>
+              </td>
+              <td class="ch" valign="top" style="margin-top:5px;">
+                  <input type="text" name="business_provides" value=""
+                  class="formInput required busprovides" id="businessprovidesfield"
+                  size="40" maxlength="50" style="left:0;top:0;position:relative;"
+                  onFocus="entity_specific_help('businessprovides', 'businessprovidesfield')">
+              </td>
+          </tr>
+      </table>
+    </div>
+    <!-- END BUSINESS PROVIDES -->
+
+    <br />
+    <button ng-click="next('step5exist')">Next Step</button>
 </section>

@@ -1,11 +1,11 @@
 <section class="hero-content">
     <h1>Entity</h1>
         <label>Select The Entity Type You Would Like To Form:</label>
-            <select type="text" ng-model="newEntity" >
+            <select type="text" ng-model="currentWizard.entity.companyType" >
                 <option value>-- Choose Here --</option>
                 <option value="LLC">Limited Liability Company (LLC)</option>
                 <option value="CORP">Corporation (Inc)</option>
             </select>
         <br />
-    <button ng-click="next('step2new')">Submit</button>    
+    <button ng-click="next('step2new')">Submit</button>
 </section>

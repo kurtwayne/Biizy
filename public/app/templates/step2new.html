@@ -2,10 +2,10 @@
     <h1>Business Details</h1>
   	<h3 class="hero-title">Step 2</h3>
     <label>Company Name</label>
-		<input type="text" placeholder="Company Name" ng-model="coName" />
+		<input type="text" placeholder="Company Name" ng-model="currentWizard.entity.coName" />
     <br />
     <label>Designator</label>
-        <select type="text" ng-model="designator" >
+        <select type="text" ng-model="currentWizard.entity.designator" >
             <option selected="selected" value="">-- Select --</option>
             <option value=", LLC">, LLC</option>
             <option value=", L.L.C">, L.L.C</option>
@@ -17,7 +17,7 @@
     <br />
     <!-- Need 'if' statement to show this section if corporation is selected -->
     <label>Designator (**Show if Corporation**)</label>
-        <select type="text" ng-model="designator" >
+        <select type="text" ng-model="currentWizard.entity.designator" >
             <option selected="selected" value="">-- Select --</option>
             <option value=", Incorporated">, Incorporated</option>
             <option value=", Inc.">, Inc.</option>

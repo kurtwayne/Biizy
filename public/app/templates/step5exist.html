@@ -1,17 +1,64 @@
 <section class="hero-content">
     <h1>Entity</h1>
-        <label>Select Your Entity Type:</label>
-            <select type="text" ng-model="entity" >
-                <option value>-- Choose Here --</option>
-                <option value="LLC">Limited Liability Company (LLC)</option>
-                <option value="CORP">Corporation (Inc)</option>
-                <option value="SOLE PROP">Individual / Sole Proprietor</option>
-                <option value="PARTNER">Partnership</option>
-                <option value="SCORP">S-Corporation</option>
-                <option value="LP">Personal Service Corporation (Licensed Professional)</option>
-                <option value="CHURCH">Church or Church Controlled Organization</option>
-                <option value="NPO">Other Non-profit Organization</option>
-            </select>
+    <!-- MORE BUSINESS INFO -->
+    <div id="div_businessquestions" style="">
+        <hr/>
+      <table align="left" style="margin:0px;padding:0px;">
+          <tr>
+          <tr>
+            <td class="chsub" valign="top" style="width:200px;" onMouseOver="showHelp('business_vehicle')">Does your business own a highway motor vehicle weighing 55,000 pounds or more?</td>
+              <td class="radio_left" valign="top" onMouseOver="showHelp('business_vehicle')" style="padding:5px 0 0 25px">
+                <input type="radio" class="radio" onMouseOver="showHelp(this.id)" name="business_vehicle" id="business_vehicle"
+                  value="no"  checked>No</td>
+              <td valign="top" onMouseOver="showHelp('business_vehicle')" style="padding:5px 0 0 15px;text-align:left;">
+                  <input type="radio" class="radio" onMouseOver="showHelp(this.id)" name="business_vehicle" id="business_vehicle"
+                  value="yes" >Yes</td>
+              <td style="width:25px;">&nbsp;</td>
+          </tr>
+      </table>
+      <br/>
+      <table style="margin:0px;padding:0px;">
+          <tr>
+            <td class="chsub" valign="top" style="width: 200px;" onMouseOver="showHelp('business_gambling')">Does your business involve gambling?</td>
+              <td class="radio_left" valign="top" onMouseOver="showHelp('business_gambling')" style="padding:5px 0 0 25px;">
+                <input type="radio" class="radio" onMouseOver="showHelp(this.id)" name="business_gambling" id="business_gambling"
+                  value="no"  checked>No</td>
+              <td valign="top" onMouseOver="showHelp('business_gambling')" style="padding:5px 0 0 15px;text-align:left;">
+                  <input type="radio" class="radio" onMouseOver="showHelp(this.id)" name="business_gambling" id="business_gambling"
+                  value="yes" >Yes</td>
+              <td style="width:25px;">&nbsp;</td>
+          </tr>
+      </table>
+      <br/>
+      <table align="left" style="margin:0px;padding:0px;">
+          <tr>
+            <td class="chsub" valign="top" style="width: 200px;" onMouseOver="showHelp('business_atf')">Does your business sell or manufacture alcohol, tobacco, or firearms?</td>
+              <td class="radio_left" valign="top" onMouseOver="showHelp('business_atf')" style="padding:5px 0 0 25px;">
+                <input type="radio" class="radio" onMouseOver="showHelp(this.id)" name="business_atf" id="business_atf"
+                  value="no"  checked>No</td>
+              <td valign="top" onMouseOver="showHelp('business_atf')" style="padding:5px 0 0 15px;text-align:left;">
+                  <input type="radio" class="radio" onMouseOver="showHelp(this.id)" name="business_atf" id="business_atf"
+                  value="yes" >Yes</td>
+              <td style="width:25px;">&nbsp;</td>
+          </tr>
+      </table>
+      <br/>
+      <table align="left" style="margin:0px;padding:0px;width:520px;">
+          <tr>
+            <td class="chsub" valign="top" style="width: 200px;" onMouseOver="showHelp('business_720')">Does your business pay federal excise taxes?</td>
+              <td class="radio_left" valign="top" onMouseOver="showHelp('business_720')" style="padding:5px 0 0 25px;"><input
+                  type="radio" class="radio" onMouseOver="showHelp(this.id)" name="business_720" id="business_720"
+                  value="no"  checked>No</td>
+              <td valign="top" onMouseOver="showHelp('business_720')" style="padding:5px 0 0 15px;text-align:left;">
+                  <input type="radio" class="radio" onMouseOver="showHelp(this.id)" name="business_720" id="business_720"
+                  value="yes" >Yes</td>
+              <td style="width:25px;">&nbsp;</td>
+          </tr>
+      </table>
+      <br/>
+    </div>
+    <!-- END MORE BUSINESS INFO -->
+
         <br />
-    <button ng-click="next('step6exist')">Submit</button>    
+    <button ng-click="next('step6exist')">Next Step</button>
 </section>

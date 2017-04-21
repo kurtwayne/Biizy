@@ -1,8 +1,11 @@
 <section class="hero-content">
-    <h1>Business Information</h1>
-  	<h3 class="hero-title">Step 2</h3>
-    <label >Enter your number:</label>
-		<input type="text" ng-model="number" />
+    <h1>Are you looking to obtain a new or proof of exisiting Tax ID / EIN?</h1>
+    <label>Select:</label>
+        <select type="text" ng-model="newEntity" >
+            <option value>-- Choose Here --</option>
+            <option value="NEW ID">New Tax ID / EIN</option>
+            <option value="EXIST ID">Proof of an Existing Tax ID / EIN</option>
+        </select>
     <br />
-    <button ng-click="next('step3exist')">Go to 3</button>
+    <button ng-click="next('step3exist')">Next Step</button>
 </section>
