@@ -1,8 +1,8 @@
 angular
-    .module('biizyApp') 
+    .module('biizyApp')
     .controller("step7newCtrl", function($rootScope, $scope, $state) {
-                    $scope.next = function() {
-                        $rootScope.currentWizard.lastName = {};
+      $scope.currentWizard = $rootScope.currentWizard;
+      $scope.next = function() {
                         $state.go("shipping");
                     }
     });

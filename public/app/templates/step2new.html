@@ -29,7 +29,7 @@
         </select>
     <br />
     <label>Industry Category</label>
-        <select type="text" ng-model="industry" >
+        <select type="text" ng-model="currentWizard.entity.industry" >
             <option value>-- Select --</option>
             <option value="1">Agriculture</option>
             <option value="2">Amusement Industries</option>
@@ -64,7 +64,7 @@
         </select>
     <br />
     <label>Business Description</label>
-        <textarea  ng-model="bizdescription" required class="form-control" data-parsley-class-handler="#description-group" data-parsley-trigger="keyup" data-parsley-minlength="50" data-parsley-maxlength="250" data-parsley-minlength-message="Please enter at least  50 characters." data-parsley-validation-threshold="10">
+        <textarea  ng-model="currentWizard.entity.bizdescription" required class="form-control" data-parsley-class-handler="#description-group" data-parsley-trigger="keyup" data-parsley-minlength="50" data-parsley-maxlength="250" data-parsley-minlength-message="Please enter at least  50 characters." data-parsley-validation-threshold="10">
         </textarea>
     <br />
     <button ng-click="next('step3new')">Next Step</button>
