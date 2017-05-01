@@ -7,7 +7,7 @@
           <tr>
             <td class="chsub" valign="top"  style="margin-top:5px;">Closest Reason for Applying</td>
             <td class="ch" valign="top" style="margin-top:5px;"><span id="entityreasonfield" class="formInputSpan">
-              <select name="entity_reason" id="entity_reason" onChange="checkReason()" onfocus="showHelp(this.id)" size="1" class="formwidthm required">
+              <select name="entity_reason" id="entity_reason" ng-model="currentWizard.entity.applyReason" onChange="checkReason()" onfocus="showHelp(this.id)" size="1" class="formwidthm required">
                 <option value="0">Select</option>
                 <option value="started_new_business"  >Started New Business / Personal Use</option>
                 <option value="hired_employees"  >Hired Employees</option>
@@ -29,7 +29,7 @@
             <td class="chsub"  valign="top" style="margin-top:5px;">Primary Activity</td>
             <td class="ch" valign="top" style="margin-top:5px;">
         			<span class="formInputSpan">
-        				<select name="entity_activity" id="entityactivityfield" onChange="checkActivity()" onFocus="showHelp(this.id)" size="1" class="formwidthm required">
+        				<select name="entity_activity" id="entityactivityfield" ng-model="currentWizard.entity.primaryActivity" onChange="checkActivity()" onFocus="showHelp(this.id)" size="1" class="formwidthm required">
         					<option value="" selected>Select</option>
         					<option value="construction" >Construction</option>
         					<option value="rental_leasing" >Rental Leasing</option>
@@ -65,7 +65,7 @@
   	            </div>
               </td>
               <td class="ch" valign="top" style="margin-top:5px;">
-                  <input type="text" name="business_provides" value=""
+                  <input type="text" ng-model="currentWizard.entity.prodServices" name="business_provides" value=""
                   class="formInput required busprovides" id="businessprovidesfield"
                   size="40" maxlength="50" style="left:0;top:0;position:relative;"
                   onFocus="entity_specific_help('businessprovides', 'businessprovidesfield')">

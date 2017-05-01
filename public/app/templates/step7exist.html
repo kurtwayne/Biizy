@@ -8,10 +8,10 @@
               <td class="chsub" valign="top" style="width:200px;">Do you have or expect to have an employee within 12 months, excluding owners?</td>
               <td class="radio_left" valign="top" onMouseOver="showHelp('have_emp', 'haveempfield')" style="padding:5px 0 0 30px;">
                   <span id="haveempfield" style="border: none;">
-                  <input type="radio" class="radio" name="have_emp" id="have_emp" style="border:none;" onFocus="showHelp('have_emp', 'haveempfield')" onMouseOver="showHelp('have_emp', 'haveempfield')"
+                  <input type="radio" class="radio" name="have_emp" ng-model="currentWizard.entity.have_emp" id="have_emp" style="border:none;" onFocus="showHelp('have_emp', 'haveempfield')" onMouseOver="showHelp('have_emp', 'haveempfield')"
                    checked VALUE="no" onClick="checkEmp()">No</td>
               <td valign="top" onMouseOver="showHelp('have_emp', 'haveempfield')" style="padding:5px 0 0 15px;text-align:left;">
-                  <input type="radio" class="radio" name="have_emp" id="have_emp" style="border:none;" onFocus="showHelp('have_emp', 'haveempfield')" onMouseOver="showHelp('have_emp', 'haveempfield')"
+                  <input type="radio" class="radio" name="have_emp" ng-model="currentWizard.entity.have_emp" id="have_emp" style="border:none;" onFocus="showHelp('have_emp', 'haveempfield')" onMouseOver="showHelp('have_emp', 'haveempfield')"
                   VALUE="yes" onClick="checkEmp()">Yes</td>
           </tr>
       </table>
@@ -26,9 +26,9 @@
           <td class="chsub" valign="top" style="width:200px;">If you expect to pay less than $4,000 in wages over the next calendar year, do you wish to file annual instead of quarterly taxes?</td>
           <td class="radio_left" valign="top" onMouseOver="showHelp('have_emp', 'wages4000field')" style="padding:5px 0 0 30px;">
             <span id="haveempfield">
-              <input type="radio" class="radio" id="wages4000field" class="formInput" name="wages_4000" value="no"  onFocus="showHelp('have_emp', 'wages4000field')" onMouseOver="showHelp('have_emp', 'wages4000field')">No</td>
+              <input type="radio" class="radio" ng-model="currentWizard.entity.wages_4000" id="wages4000field" class="formInput" name="wages_4000" value="no"  onFocus="showHelp('have_emp', 'wages4000field')" onMouseOver="showHelp('have_emp', 'wages4000field')">No</td>
           <td valign="top" onMouseOver="showHelp('have_emp', 'wages4000field')" style="padding:5px 0 0 15px;text-align:left;">
-              <input type="radio" class="radio" id="wages4000field" class="formInput" name="wages_4000" value="yes"  onFocus="showHelp('have_emp', 'wages4000field')" onMouseOver="showHelp('have_emp', 'wages4000field')">Yes
+              <input type="radio" class="radio" ng-model="currentWizard.entity.wages_4000" id="wages4000field" class="formInput" name="wages_4000" value="yes"  onFocus="showHelp('have_emp', 'wages4000field')" onMouseOver="showHelp('have_emp', 'wages4000field')">Yes
           </td>
       </tr>
       </table>
@@ -40,7 +40,7 @@
       <tr>
         <td class="chsub twowide" valign="top" style="width:200px;">Number of Agricultural Employees</td>
         <td class="ch" valign="top left" style="padding-left:10px;"><input maxlength="4"
-            type="text" id="employeesagriculturefield" align="left" class="formInput" style="width: 200px;" name="employees_agriculture"
+            type="text" ng-model="currentWizard.entity.employeesAgriculture" id="employeesagriculturefield" align="left" class="formInput" style="width: 200px;" name="employees_agriculture"
             value="" size="4"
             onFocus="showHelp('have_emp', 'employeesagriculturefield')" onChange="ag_employees_valid()"></td>
       </tr>
@@ -51,7 +51,7 @@
       <tr>
           <td class="chsub twowide" valign="top" style="width:200px;">Number of Household Employees</td>
           <td class="ch" valign="top" style="height: 65px;padding-left:10px;"><input maxlength="4"
-              type="text" id="employeeshouseholdfield"  class="formInput" style="width: 200px;" name="employees_household"
+              type="text" ng-model="currentWizard.entity.employeesHousehold" id="employeeshouseholdfield"  class="formInput" style="width: 200px;" name="employees_household"
               value="" size="4"
               onFocus="showHelp('have_emp', 'employeeshouseholdfield')" onChange="ho_employees_valid()"><br />
               <span class="grayright" style="color:#000; font-size: 12px;">Domestic workers such as nannies, health aids, maids, etc.</span></td>
@@ -63,14 +63,14 @@
       <tr>
           <td class="chsub twowide" valign="top" style="width:200px;">Number of Other <br />Employees</td>
           <td class="ch" valign="top" style="padding-left:10px;"><input maxlength="4"
-              type="text" id="employeesotherfield" class="formInput"  style="width: 200px;" name="employees_other"
+              type="text" ng-model="currentWizard.entity.numEmployeesOther" id="employeesotherfield" class="formInput"  style="width: 200px;" name="employees_other"
               value="" size="4"
               onFocus="showHelp('have_emp', 'employeesotherfield')" onChange="ot_employees_valid()"></td>
       </tr>
       <tr>
           <td class="chsub twowide" valign="top" style="width:200px;">First Date Wages Were/Will be Paid</td>
           <td class="ch" valign="top" style="padding-left:10px;"><span id="employeesdatefield" class="formInputSpan">
-            <select id="date_wagespaid_month"
+            <select id="date_wagespaid_month" ng-model="currentWizard.entity.employeesPaidMonth"
               name="date_wagespaid_month" onFocus="showHelp('have_emp', 'employeesdatefield')">
               <option value="0">Month</option>
               <option value="01" >Jan</option>
@@ -86,7 +86,7 @@
               <option value="11" >Nov</option>
               <option value="12" >Dec</option>
             </select>
-            <select id="date_wagespaid_day" name="date_wagespaid_day" onFocus="showHelp('have_emp','date_wagespaid_day')">
+            <select id="date_wagespaid_day" ng-model="currentWizard.entity.employeesPaidDay" name="date_wagespaid_day" onFocus="showHelp('have_emp','date_wagespaid_day')">
               <option value="0">Day</option>
               <option value="01" >1</option>
               <option value="02" >2</option>
@@ -119,7 +119,8 @@
               <option value="29" >29</option>
               <option value="30" >30</option>
               <option value="31" >31</option>
-            </select><select id="date_wagespaid_year" name="date_wagespaid_year" onFocus="showHelp('have_emp', 'date_wagespaid_year')">
+            </select>
+            <select id="date_wagespaid_year" ng-model="currentWizard.entity.employeesPaidYear" name="date_wagespaid_year" onFocus="showHelp('have_emp', 'date_wagespaid_year')">
               <option value="0">Year</option>
               <option value="1992" >1992</option>
               <option value="1993" >1993</option>
@@ -173,7 +174,7 @@
       <tr>
         <td class="left" valign="top">
           <div align="float:left">
-              <select name="select_num_members" id="select_num_members" onFocus="showHelp('llc_tax', 'select_num_members')" onChange="checkEntity(false); checkLLCNum();" style="float:left">
+              <select name="select_num_members" ng-model="currentWizard.entity.numMembersOwners" id="select_num_members" onFocus="showHelp('llc_tax', 'select_num_members')" onChange="checkEntity(false); checkLLCNum();" style="float:left">
                   <option value="1" >1</option>
                   <option value="2" >2</option>
                   <option value="3" >3</option>
@@ -192,15 +193,15 @@
               Are the Members/Owners husband &amp; wife?<br />
             <table align="left" style="margin:0px;padding:0px;">
               <tr>
-                  <td valign="top"><input type="radio" class="radio" name="llc_couple" value="no" checked='checked' ?>>No</td>
+                  <td valign="top"><input type="radio" ng-model="currentWizard.entity.memberSpouse" class="radio" name="llc_couple" value="no" checked='checked' ?>>No</td>
                     <td>&nbsp;</td>
                   <td valign="top">
-                      <input type="radio" class="radio" name="llc_couple" value="yes" >Yes</td>
+                      <input type="radio" ng-model="currentWizard.entity.memberSpouse" class="radio" name="llc_couple" value="yes" >Yes</td>
               </tr>
             </table>
           </div>
           <div id="div_llc_members" style=";float:left;margin-left:2px;">&nbsp;&nbsp;Specify number of Members/Owners:
-            <input type="text" name="llc_num_other" onChange="change_llc_num_members();" value=""
+            <input type="text" ng-model="currentWizard.entity.numMembersOwners" name="llc_num_other" onChange="change_llc_num_members();" value=""
               class="formInput" id="llc_num_other_field" maxlength="5" size="5">
           </div>
       </tr>
@@ -212,11 +213,11 @@
       <tr>
         <td valign="top" class="radio_left">
           <div style="text-align:left;width:460px;border:none">
-            <input type="radio" class="radio" name="llc_tax" checked  VALUE="single"
+            <input type="radio" ng-model="currentWizard.entity.llcTax" class="radio" name="llc_tax" checked  VALUE="single"
             onFocus = "showHelp('llc_tax', 'select_num_members')">Individual/Partnership: Not taxed as a separate entity from owner(s).<br>
-            <input type="radio" class="radio" name="llc_tax"
+            <input type="radio" ng-model="currentWizard.entity.llcTax" class="radio" name="llc_tax"
                  VALUE="scorp" onFocus = "showHelp('llc_tax', 'select_num_members')">S-Corporation:  Planning to elect an S-Corporation tax structure.<br>
-            <input type="radio" class="radio" name="llc_tax"
+            <input type="radio" ng-model="currentWizard.entity.llcTax" class="radio" name="llc_tax"
                  VALUE="corp" onFocus = "showHelp('llc_tax', 'select_num_members')">Corporation: LLC is planning to elect a Corporation tax structure. <br></td>
           </div>
       </tr>

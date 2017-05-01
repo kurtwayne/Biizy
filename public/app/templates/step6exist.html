@@ -11,12 +11,12 @@
                 </div>
               </td>
               <td class="radio_left" valign="top" style="padding:5px 0 0 30px;">
-                <input type="radio" class="radio" onFocus="showHelp('app_before')" name="app_before" id="app_before"
+                <input type="radio" ng-model="currentWizard.entity.appliedBefore" class="radio" onFocus="showHelp('app_before')" name="app_before" id="app_before"
                   value="no"  checked
                   onClick="checkEIN()">No</td>
               <td valign="top" style="padding:5px 0 0 15px;text-align:left;">
                   <input
-                  type="radio" class="radio" onFocus="showHelp('app_before')" name="app_before" id="app_before"
+                  type="radio" class="radio" ng-model="currentWizard.entity.appliedBefore" onFocus="showHelp('app_before')" name="app_before" id="app_before"
                   value="yes"
                   onClick="checkEIN()">Yes</td>
           </tr>
@@ -30,13 +30,13 @@
           <tr>
               <td class="chsub" valign="top">Previous Federal Tax ID (EIN)</td>
               <td class="ch" valign="top">
-                  <input type="hidden" style="display:none" name="applied_before_name" id="applied_before_name" value="">
-                  <input type="hidden" style="display:none" name="applied_before_location" id="applied_before_location" value="">
-                  <input type="hidden" style="display:none" name="applied_before_month" id="applied_before_month" value="">
-                  <input type="hidden" style="display:none" name="applied_before_day" id="applied_before_day" value="">
-                  <input type="hidden" style="display:none" name="applied_before_year" id="applied_before_year" value="">
+                  <input type="hidden" style="display:none" ng-model="currentWizard.entity.applied_before_name" id="applied_before_name" value="">
+                  <input type="hidden" style="display:none" ng-model="currentWizard.entity.applied_before_location" id="applied_before_location" value="">
+                  <input type="hidden" style="display:none" ng-model="currentWizard.entity.applied_before_month" id="applied_before_month" value="">
+                  <input type="hidden" style="display:none" ng-model="currentWizard.entity.applied_before_day" id="applied_before_day" value="">
+                  <input type="hidden" style="display:none" ng-model="currentWizard.entity.applied_before_year" id="applied_before_year" value="">
                   <input onFocus="showHelp('app_before_ein', this.id)"
-                      type="text" name="applied_before_number" onChange="add_owner(this.id)";
+                      type="text" ng-model="currentWizard.entity.applied_before_number" onChange="add_owner(this.id)";
                       value="" class="formInput formwidthm" id="appliedbeforenumberfield" size="40" maxlength="10">
               </td>
           </tr>
@@ -56,7 +56,7 @@
                 </div>
               </td>
               <td class="ch" valign="top"><span id="datestartedfield" class="formInputSpan">
-                <select id="date_acquired_month"
+                <select id="date_acquired_month" ng-model="currentWizard.entity.date_acquired_month"
                   name="date_acquired_month" class="required" onFocus="entity_specific_help('date_started', 'textdatestarted')">
                   <option value="01" >Jan</option>
                   <option value="02" >Feb</option>
@@ -71,7 +71,7 @@
                   <option value="11" >Nov</option>
                   <option value="12" >Dec</option>
                 </select>
-                <select name="date_acquired_day" id="date_acquired_day" class="required" onFocus="entity_specific_help('date_started', 'date_acquired_day')">
+                <select name="date_acquired_day" id="date_acquired_day" ng-model="currentWizard.entity.date_acquired_day" class="required" onFocus="entity_specific_help('date_started', 'date_acquired_day')">
                   <option value="01" >1</option>
                   <option value="02" >2</option>
                   <option value="03" >3</option>
@@ -104,7 +104,7 @@
                   <option value="30" >30</option>
                   <option value="31" >31</option>
                 </select>
-                <select id="date_acquired_year" name="date_acquired_year" class="required" onFocus="entity_specific_help('date_started', 'date_acquired_year')">
+                <select id="date_acquired_year" name="date_acquired_year" ng-model="currentWizard.entity.date_acquired_year" class="required" onFocus="entity_specific_help('date_started', 'date_acquired_year')">
                   <option value="1992" >1992</option>
                   <option value="1993" >1993</option>
                   <option value="1994" >1994</option>
@@ -146,7 +146,7 @@
               <td class="chsub twowide" valign="top"><div><span id="textclosingmonth">not shown</span>
   	    </div></td>
               <td class="ch" valign="top">
-                <select id="date_closingmonth" name="date_closingmonth" class="required" onFocus="entity_specific_help('date_started', 'date_closingmonth')">
+                <select id="date_closingmonth" name="date_closingmonth" ng-model="currentWizard.entity.date_closing_month" class="required" onFocus="entity_specific_help('date_started', 'date_closingmonth')">
                   <option value="01" >Jan</option>
                   <option value="02" >Feb</option>
                   <option value="03" >Mar</option>

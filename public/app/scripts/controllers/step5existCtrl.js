@@ -1,8 +1,9 @@
 angular
-    .module('biizyApp') 
+    .module('biizyApp')
     .controller("step5existCtrl", function($rootScope, $scope, $state) {
+                    $scope.currentWizard = $rootScope.currentWizard;
                     $scope.next = function() {
-                        $rootScope.currentWizard.lastName = {};
+                        console.log("Button is Clicked for Step 5")
                         $state.go("step6exist");
                     }
     });
