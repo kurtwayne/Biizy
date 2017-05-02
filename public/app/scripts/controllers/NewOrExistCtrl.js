@@ -6,7 +6,6 @@ angular
                         console.log("Step1 button Clicked")
                         $rootScope.currentWizard = {};
                         $rootScope.currentWizard.entity = {};
-                        $rootScope.currentWizard.newEntity = {};
                         $state.go(stepName);
                     }
     });
