@@ -18,18 +18,14 @@
     <!-- nav bar -->
     <nav class="navbar">
         <a ui-sref="landing" class="logo">
-            <span class="movetext">Biizy</span>
+            <span class="movetext">
+              <img src="../app/assets/images/biizy_logo_gray_sideways.png" ui-sref="landing" alt="biizy logo 2">
+            </span>
             <img class="" src="../app/assets/images/biizy_logo_gray.png" ui-sref="landing" alt="biizy logo">
         </a>
-        <div class="links-container-left">
-            <a ui-sref="request" class="navbar-link">Request</a>
-            <a ui-sref="services" class="navbar-link">Services</a>
-            <a ui-sref="faq" class="navbar-link">FAQ</a>
-        </div>
-        <div class="links-container-right">
-            <a ui-sref="landing" class="navbar-link">Sign Up</a>
-            <a ui-sref="landing" class="navbar-link">Log In</a>
-        </div>
+        <a ui-sref="request">Request</a>
+        <a ui-sref="services">Services</a>
+        <a ui-sref="faq">FAQ</a>
     </nav>
 
     <ui-view></ui-view>
@@ -40,6 +36,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.1.10/buzz.min.js"></script>
     <script src="/app/scripts/app.js"></script>
+    <script src="/app/scripts/features.js"></script>
     <script src="/app/scripts/controllers/LandingCtrl.js"></script>
     <script src="/app/scripts/controllers/RequestCtrl.js"></script>
     <script src="/app/scripts/controllers/ServicesCtrl.js"></script>

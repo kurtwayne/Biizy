@@ -22,84 +22,44 @@ body {
     padding-bottom: 200px;
 }
 
-.navbar {
-    display: flex;
-    flex-direction: row;
+nav {
+    text-align: right;
     position: fixed;
     padding: 0.5rem;
     background-color: #f5f5f5;
     z-index: 1000;
-    min-height: 77px;
+    min-height: 50px;
+    width: 100%;
 }
 
-.navbar .logo {
-    justify-content: flex-start;
-    position: relative;
-    top: 0.25rem;
-    left: 0;
+nav img {
+    z-index: 1000;
+    height: 3em;
+    position: absolute;
+    left: 40px;
+    top: 10px;
+    transition: all 0.5s linear;
     cursor: pointer;
 }
 
-.navbar .links-container-right {
-    display: table;
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 82px;
+nav a {
     color: #757575;
-    text-decoration: none;
-}
-
-.navbar .links-container-left {
     align-self: center;
-    display: table;
-}
-
-.links-container-right .navbar-link:hover {
-    background-color: yellow;
-    color: black;
-}
-
-.links-container-left .navbar-link:hover {
-    color: black;
-}
-
-.links-container-right .navbar-link {
-    display: table-cell;
-    position: relative;
-    height: 100%;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    vertical-align: middle;
-    color: #757575;
-    font-size: 0.625rem;
-    letter-spacing: 0.05rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.links-container-left .navbar-link {
-    position: relative;
-    height: 100%;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    vertical-align: middle;
-    color: #757575;
     font-size: 0.85rem;
     letter-spacing: 0.05rem;
     text-transform: uppercase;
     text-decoration: none;
     cursor: pointer;
+    display: inline-block;
+    padding: 1em 1em .5em;
+    -webkit-translation: all .3s ease-in;
 }
 
-
-.links-container-right .navbar-link:hover {
-    color: black;
+.small {
+  padding: .5em 1em .5em;
 }
 
-.links-container-left .navbar-link:hover {
+nav a:hover {
     color: black;
 }
 
@@ -141,7 +101,7 @@ section h1 {
 }
 
 .section {
-    
+
 }
 
 .section.hero .row {
@@ -153,4 +113,28 @@ section h1 {
     position: absolute;
     top: 0;
     width: 100%
+}
+
+.small {
+  padding: .5em 1em;
+}
+
+.move {
+  top: -60px;
+}
+
+nav span {
+  position: absolute;
+  left: 40px;
+  top: 65px;
+  font-weight: bold;
+  transition: all 0.5s ease-in;
+}
+
+.movetext {
+  top: -70px;
+}
+
+.fade {
+  border-bottom: .25px solid #757575;
 }
