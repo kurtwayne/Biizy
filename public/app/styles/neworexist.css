@@ -23,3 +23,7 @@ body.landing {
     max-width: 800px;
     padding: 0 5px;
 }
+
+.subpage {
+  top: 25em;
+}
