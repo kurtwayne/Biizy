@@ -14,7 +14,8 @@ RED.init(server, {
     // can be used to specifiy a different root path. If set to false, this is
     // disabled.
     httpNodeRoot: '/',
-
+    userDir: __dirname + "/flows",
+    flowFile: "biizy.json",
     // The following property can be used in place of 'httpAdminRoot' and 'httpNodeRoot',
     // to apply the same root to both parts.
     //httpRoot: '/red',
