@@ -28,5 +28,5 @@ RED.init(server, {
 
 app.use("/system/admin",RED.httpAdmin);
 app.use("/",RED.httpNode);
-server.listen(3030);
+server.listen(process.env.PORT);
 RED.start();
