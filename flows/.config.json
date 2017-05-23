@@ -422,6 +422,24 @@
      "file": "/Users/kurt.gardner/Documents/Bloc/capstone/Biizy/node_modules/node-red-node-twitter/27-twitter.js"
     }
    }
+  },
+  "node-red-contrib-mongodb2": {
+   "name": "node-red-contrib-mongodb2",
+   "version": "0.5.5",
+   "local": false,
+   "nodes": {
+    "mongodb2": {
+     "name": "mongodb2",
+     "types": [
+      "mongodb2",
+      "mongodb2 in"
+     ],
+     "enabled": true,
+     "local": false,
+     "module": "node-red-contrib-mongodb2",
+     "file": "/Users/kurt.gardner/Documents/Bloc/capstone/Biizy/node_modules/node-red-contrib-mongodb2/mongodb2/mongodb2.js"
+    }
+   }
   }
  },
  "_credentialSecret": "7c1d4d5f68e7c8317cfd58de65fee261541a9a62096abe5dc67b8c006667090e"
