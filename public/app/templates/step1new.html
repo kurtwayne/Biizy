@@ -1,11 +1,15 @@
 <section class="hero-content">
-    <h1>Entity</h1>
-        <label>Select The Entity Type You Would Like To Form:</label>
-            <select type="text" ng-model="currentWizard.entity.coType" >
-                <option value"choose">-- Choose Here --</option>
-                <option value="New LLC">Limited Liability Company (LLC)</option>
-                <option value="New CORP">Corporation (Inc)</option>
-            </select>
-        <br />
-    <button ng-click="next('step2new')">Submit</button>
+  <div class="subpage">
+    <div class="sub-content">
+      <h1>Entity</h1>
+          <label>Select The Entity Type You Would Like To Form:</label>
+              <select type="text" ng-model="currentWizard.entity.coType" >
+                  <option value"choose">-- Choose Here --</option>
+                  <option value="New LLC">Limited Liability Company (LLC)</option>
+                  <option value="New CORP">Corporation (Inc)</option>
+              </select>
+          <br />
+      <button ng-click="next('step2new')">Submit</button>
+    </div>
+  </div>
 </section>

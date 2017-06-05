@@ -1,71 +1,75 @@
 <section class="hero-content">
-    <h1>Business Details</h1>
-  	<h3 class="hero-title">Step 2</h3>
-    <label>Company Name</label>
-		<input type="text" placeholder="Company Name" ng-model="currentWizard.entity.coName" />
-    <br />
-    <label>Designator</label>
-        <select type="text" ng-model="currentWizard.entity.designator" >
-            <option selected="selected" value="">-- Select --</option>
-            <option value=", LLC">, LLC</option>
-            <option value=", L.L.C">, L.L.C</option>
-            <option value=", Limited Liability Company">, Limited Liability Company</option>
-            <option value="LLC">LLC</option>
-            <option value="L.L.C">L.L.C</option>
-            <option value="Limited Liability Company">Limited Liability Company</option>
-        </select>
-    <br />
-    <!-- Need 'if' statement to show this section if corporation is selected -->
-    <label>Designator (**Show if Corporation**)</label>
-        <select type="text" ng-model="currentWizard.entity.designator" >
-            <option selected="selected" value="">-- Select --</option>
-            <option value=", Incorporated">, Incorporated</option>
-            <option value=", Inc.">, Inc.</option>
-            <option value=" Inc"> Inc</option>
-            <option value=" Incorporated"> Incorporated</option>
-            <option value=" Inc."> Inc.</option>
-            <option value=" Corporation"> Corporation</option>
-            <option value=" Company"> Company</option>
-        </select>
-    <br />
-    <label>Industry Category</label>
-        <select type="text" ng-model="currentWizard.entity.industry" >
-            <option value>-- Select --</option>
-            <option value="1">Agriculture</option>
-            <option value="2">Amusement Industries</option>
-            <option value="3">Pet-Related Businesses</option>
-            <option value="5">Arts and Entertainment</option>
-            <option value="6">Automotive</option>
-            <option value="7">Transportation</option>
-            <option value="8">Contractor</option>
-            <option value="9">Personal Care</option>
-            <option value="11">Educational / Instruction</option>
-            <option value="13">Financial Services</option>
-            <option value="14">Food &amp; Beverage</option>
-            <option value="15">Fuel, Mining</option>
-            <option value="16">Traveler Accommodations</option>
-            <option value="17">Manufacturing</option>
-            <option value="18">Health Care</option>
-            <option value="19">Retail / Wholesale Trade</option>
-            <option value="20">Transportation - Passenger</option>
-            <option value="21">Second Hand Dealers</option>
-            <option value="22">Real Estate</option>
-            <option value="23">Security</option>
-            <option value="24">Social Services</option>
-            <option value="25">Telecommunication</option>
-            <option value="27">Weapons and Ammunition</option>
-            <option value="29">Information Services</option>
-            <option value="30">Professional / Technical Services</option>
-            <option value="31">Administrative and Support</option>
-            <option value="32">Services &amp; Activities</option>
-            <option value="33">Insurance</option>
-            <option value="34">Architectural / Engineering</option>
-            <option value="35">Debt Collection</option>
-        </select>
-    <br />
-    <label>Business Description</label>
-        <textarea  ng-model="currentWizard.entity.bizdescription" required class="form-control" data-parsley-class-handler="#description-group" data-parsley-trigger="keyup" data-parsley-minlength="50" data-parsley-maxlength="250" data-parsley-minlength-message="Please enter at least  50 characters." data-parsley-validation-threshold="10">
-        </textarea>
-    <br />
-    <button ng-click="next('step3new')">Next Step</button>
+  <div class="subpage">
+    <div class="sub-content">
+      <h1>Business Details</h1>
+    	<!-- <h3 class="hero-title">Step 2</h3> -->
+      <label>Company Name</label>
+  		<input type="text" placeholder="Company Name" ng-model="currentWizard.entity.coName" />
+      <br />
+      <label>Designator</label>
+          <select type="text" ng-model="currentWizard.entity.designator" >
+              <option selected="selected" value="">-- Select --</option>
+              <option value=", LLC">, LLC</option>
+              <option value=", L.L.C">, L.L.C</option>
+              <option value=", Limited Liability Company">, Limited Liability Company</option>
+              <option value="LLC">LLC</option>
+              <option value="L.L.C">L.L.C</option>
+              <option value="Limited Liability Company">Limited Liability Company</option>
+          </select>
+      <br />
+      <!-- Need 'if' statement to show this section if corporation is selected -->
+      <label>Designator (**Show if Corporation**)</label>
+          <select type="text" ng-model="currentWizard.entity.designator" >
+              <option selected="selected" value="">-- Select --</option>
+              <option value=", Incorporated">, Incorporated</option>
+              <option value=", Inc.">, Inc.</option>
+              <option value=" Inc"> Inc</option>
+              <option value=" Incorporated"> Incorporated</option>
+              <option value=" Inc."> Inc.</option>
+              <option value=" Corporation"> Corporation</option>
+              <option value=" Company"> Company</option>
+          </select>
+      <br />
+      <label>Industry Category</label>
+          <select type="text" ng-model="currentWizard.entity.industry" >
+              <option value>-- Select --</option>
+              <option value="1">Agriculture</option>
+              <option value="2">Amusement Industries</option>
+              <option value="3">Pet-Related Businesses</option>
+              <option value="5">Arts and Entertainment</option>
+              <option value="6">Automotive</option>
+              <option value="7">Transportation</option>
+              <option value="8">Contractor</option>
+              <option value="9">Personal Care</option>
+              <option value="11">Educational / Instruction</option>
+              <option value="13">Financial Services</option>
+              <option value="14">Food &amp; Beverage</option>
+              <option value="15">Fuel, Mining</option>
+              <option value="16">Traveler Accommodations</option>
+              <option value="17">Manufacturing</option>
+              <option value="18">Health Care</option>
+              <option value="19">Retail / Wholesale Trade</option>
+              <option value="20">Transportation - Passenger</option>
+              <option value="21">Second Hand Dealers</option>
+              <option value="22">Real Estate</option>
+              <option value="23">Security</option>
+              <option value="24">Social Services</option>
+              <option value="25">Telecommunication</option>
+              <option value="27">Weapons and Ammunition</option>
+              <option value="29">Information Services</option>
+              <option value="30">Professional / Technical Services</option>
+              <option value="31">Administrative and Support</option>
+              <option value="32">Services &amp; Activities</option>
+              <option value="33">Insurance</option>
+              <option value="34">Architectural / Engineering</option>
+              <option value="35">Debt Collection</option>
+          </select>
+      <br />
+      <label>Business Description</label>
+          <textarea  ng-model="currentWizard.entity.bizdescription" required class="form-control" data-parsley-class-handler="#description-group" data-parsley-trigger="keyup" data-parsley-minlength="50" data-parsley-maxlength="250" data-parsley-minlength-message="Please enter at least  50 characters." data-parsley-validation-threshold="10">
+          </textarea>
+      <br />
+      <button ng-click="next('step3new')">Next Step</button>
+    </div>
+  </div>
 </section>
