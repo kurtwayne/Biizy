@@ -25,5 +25,14 @@ body.landing {
 }
 
 .subpage {
-  top: 25em;
+  top: 5em;
+}
+
+.sub-content {
+  left: 50%;
+  position: absolute;
+  text-align: center;
+  top: 14.3%;
+  transform: translate(-50%, 0);
+  z-index: 3;
 }
